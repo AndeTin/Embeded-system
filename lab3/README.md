@@ -1,80 +1,78 @@
-# Android Storage Demo App
+# Android 儲存空間示範應用程式
 
-This project demonstrates saving and loading data using three Android storage methods:
-- SharedPreferences
-- Internal Storage
-- External Storage (SD Card)
+本專案示範使用三種 Android 儲存方法來儲存和載入資料：
+- SharedPreferences（共享偏好設定）
+- Internal Storage（內部儲存空間）
+- External Storage（外部儲存空間 / SD 卡）
 
-## Setup Tutorial
+## 設定教學
 
-Follow these steps to set up this program in a new Android Studio project:
-
----
-
-## 1. Create a New Android Studio Project
-- Open Android Studio and create a new project (Empty Activity recommended).
-- Choose a package name (e.g., `com.example.simplefiledemo`).
+請按照以下步驟在新的 Android Studio 專案中設定此程式：
 
 ---
 
-## 2. Overwrite/Add the Following Files
+## 1. 建立新的 Android Studio 專案
+- 開啟 Android Studio 並建立新專案（建議使用 Empty Activity）。
+- 選擇套件名稱（例如：`com.example.simplefiledemo`）。
+
+---
+
+## 2. 覆寫/新增以下檔案
 
 ### **A. MainActivity.kt**
-- **Location:** `app/src/main/java/[your/package/name]/MainActivity.kt`
-- **Action:** Overwrite the existing `MainActivity.kt` with the provided file.
+- **位置：** `app/src/main/java/[your/package/name]/MainActivity.kt`
+- **操作：** 使用提供的檔案覆寫現有的 `MainActivity.kt`。
 
 ### **B. activity_main.xml**
-- **Location:** `app/src/main/res/layout/activity_main.xml`
-- **Action:** Overwrite the existing `activity_main.xml` with the provided file.
+- **位置：** `app/src/main/res/layout/activity_main.xml`
+- **操作：** 使用提供的檔案覆寫現有的 `activity_main.xml`。
 
 ### **C. AndroidManifest.xml**
-- **Location:** `app/src/main/AndroidManifest.xml`
-- **Action:** Add the following line inside the `<manifest>` tag (outside `<application>`):
+- **位置：** `app/src/main/AndroidManifest.xml`
+- **操作：** 在 `<manifest>` 標籤內（在 `<application>` 外）加入以下行：
   ```xml
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
   ```
-- Ensure your `<activity>` declaration for `MainActivity` is present.
+- 確保 `MainActivity` 的 `<activity>` 宣告已存在。
 
 ### **D. user_manual.md**
-- **Location:** Project root or documentation folder
-- **Action:** Reference for testing and usage instructions.
+- **位置：** 專案根目錄或文件資料夾
+- **操作：** 作為測試和使用說明的參考。
 
 ---
 
-## 3. Sync and Build
-- Click **File > Sync Project with Gradle Files** in Android Studio.
-- Build and run the app on an emulator or device.
+## 3. 同步並建置
+- 在 Android Studio 中點選 **File > Sync Project with Gradle Files**。
+- 在模擬器或裝置上建置並執行應用程式。
 
 ---
 
-## 4. Test All Features
-- Use the app to save and load data in each section (SharedPreferences, Internal Storage, External Storage).
-- Refer to `user_manual.md` for step-by-step testing instructions.
+## 4. 測試所有功能
+- 使用應用程式在每個區段（SharedPreferences、Internal Storage、External Storage）中儲存和載入資料。
+- 參考 `user_manual.md` 以取得逐步測試說明。
 
 ---
 
-## 5. Troubleshooting
-- If you see permission errors for external storage, check app permissions in device settings or use adb to grant permissions.
-- Make sure the package name in all files matches your project’s package name.
+## 5. 疑難排解
+- 如果看到外部儲存空間的權限錯誤，請在裝置設定中檢查應用程式權限，或使用 adb 授予權限。
+- 確保所有檔案中的套件名稱與您專案的套件名稱相符。
 
 ---
 
-## 6. File Reference Table
+## 6. 檔案參考表
 
-| File                | Location                                             | Action                |
+| 檔案                | 位置                                                 | 操作                  |
 |---------------------|-----------------------------------------------------|-----------------------|
-| MainActivity.kt     | app/src/main/java/[your/package/name]/MainActivity.kt| Overwrite             |
-| activity_main.xml   | app/src/main/res/layout/activity_main.xml            | Overwrite             |
-| AndroidManifest.xml | app/src/main/AndroidManifest.xml                     | Add permission line   |
-| user_manual.md      | Project root                                         | Reference only        |
+| MainActivity.kt     | app/src/main/java/[your/package/name]/MainActivity.kt| 覆寫                  |
+| activity_main.xml   | app/src/main/res/layout/activity_main.xml            | 覆寫                  |
+| AndroidManifest.xml | app/src/main/AndroidManifest.xml                     | 新增權限行            |
+| user_manual.md      | 專案根目錄                                           | 僅供參考              |
 
 ---
 
-## 7. Additional Notes
-- The app is compatible with Android 8 (API 26) and above.
-- All features are contained in a single activity for easy demonstration.
-- For more details, see `user_manual.md`.
+## 7. 其他說明
+- 此應用程式相容於 Android 8（API 26）及以上版本。
+- 所有功能都包含在單一活動中，方便展示。
+- 更多詳細資訊請參閱 `user_manual.md`。
 
 ---
-
-**If you need further help or want to customize the app, feel free to ask!**

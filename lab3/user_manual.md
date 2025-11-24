@@ -1,73 +1,70 @@
-# User Manual: Android Storage Demo App
+# 使用手冊：Android 儲存空間示範應用程式
 
-## 1. Launch the App
-- Open the app on your Android device or emulator.
-
----
-
-## 2. Test SharedPreferences (活動偏好設定)
-
-### a. Save to Preferences
-1. In the **SharedPreferences** section (top of the screen), tap the text box.
-2. Enter any text (e.g., `Hello Preferences`).
-3. Tap the **Save** button.
-4. You should see a message: “Saved to preferences”.
-
-### b. Load from Preferences
-1. Clear the text box (delete the text).
-2. Tap the **Load** button.
-3. The text you saved earlier should reappear in the box.
+## 1. 啟動應用程式
+- 在您的 Android 裝置或模擬器上開啟應用程式。
 
 ---
 
-## 3. Test Internal Storage (內部儲存裝置)
+## 2. 測試 SharedPreferences（活動偏好設定）
 
-### a. Save to Internal Storage
-1. In the **Internal Storage** section, tap the text box.
-2. Enter any text (e.g., `Hello Internal`).
-3. Tap the **Save** button.
-4. You should see a message: “Saved to internal storage”.
+### a. 儲存至偏好設定
+1. 在 **SharedPreferences** 區段（畫面頂部），點擊文字方塊。
+2. 輸入任何文字（例如：`Hello Preferences`）。
+3. 點擊 **Save** 按鈕。
+4. 您應該會看到訊息：「Saved to preferences」。
 
-### b. Load from Internal Storage
-1. Clear the text box.
-2. Tap the **Load** button.
-3. The text you saved earlier should reappear in the box.
-
----
-
-## 4. Test External Storage (SD卡)
-
-### a. Save to External Storage
-1. In the **External Storage (SD Card)** section, tap the text box.
-2. Enter any text (e.g., `Hello SD Card`).
-3. Tap the **Save** button.
-4. If this is your first time, the app may ask for permission to access external storage. Tap **Allow**.
-5. You should see a message: “Saved to external storage”.
-
-### b. Load from External Storage
-1. Clear the text box.
-2. Tap the **Load** button.
-3. The text you saved earlier should reappear in the box.
+### b. 從偏好設定載入
+1. 清空文字方塊（刪除文字）。
+2. 點擊 **Load** 按鈕。
+3. 您之前儲存的文字應該會重新出現在方塊中。
 
 ---
 
-## 5. Troubleshooting
+## 3. 測試 Internal Storage（內部儲存裝置）
 
-- If you see an error message, check that you have granted storage permissions.
-- If you don’t see your text after loading, make sure you saved it first.
-- You can repeat the save/load steps with different text to confirm each function works.
+### a. 儲存至內部儲存空間
+1. 在 **Internal Storage** 區段，點擊文字方塊。
+2. 輸入任何文字（例如：`Hello Internal`）。
+3. 點擊 **Save** 按鈕。
+4. 您應該會看到訊息：「Saved to internal storage」。
+
+### b. 從內部儲存空間載入
+1. 清空文字方塊。
+2. 點擊 **Load** 按鈕。
+3. 您之前儲存的文字應該會重新出現在方塊中。
 
 ---
 
-## Summary Table
+## 4. 測試 External Storage（SD卡）
 
-| Section                | Action         | Expected Result                        |
+### a. 儲存至外部儲存空間
+1. 在 **External Storage (SD Card)** 區段，點擊文字方塊。
+2. 輸入任何文字（例如：`Hello SD Card`）。
+3. 點擊 **Save** 按鈕。
+4. 如果這是您第一次使用，應用程式可能會要求存取外部儲存空間的權限。點擊 **Allow（允許）**。
+5. 您應該會看到訊息：「Saved to external storage」。
+
+### b. 從外部儲存空間載入
+1. 清空文字方塊。
+2. 點擊 **Load** 按鈕。
+3. 您之前儲存的文字應該會重新出現在方塊中。
+
+---
+
+## 5. 疑難排解
+
+- 如果您看到錯誤訊息，請檢查是否已授予儲存空間權限。
+- 如果載入後沒有看到您的文字，請確認您已先進行儲存。
+- 您可以使用不同的文字重複儲存/載入步驟，以確認每個功能都正常運作。
+
+---
+
+## 摘要表格
+
+| 區段                   | 操作          | 預期結果                               |
 |------------------------|---------------|----------------------------------------|
-| SharedPreferences      | Save/Load     | Text saved and loaded from preferences |
-| Internal Storage       | Save/Load     | Text saved and loaded from internal    |
-| External Storage (SD)  | Save/Load     | Text saved and loaded from SD card     |
+| SharedPreferences      | 儲存/載入     | 文字從偏好設定儲存和載入               |
+| Internal Storage       | 儲存/載入     | 文字從內部儲存空間儲存和載入           |
+| External Storage (SD)  | 儲存/載入     | 文字從 SD 卡儲存和載入                 |
 
 ---
-
-**You have now tested all three functions!**
-If you need screenshots or further help, let me know!
