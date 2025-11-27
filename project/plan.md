@@ -116,12 +116,20 @@ CREATE TABLE users (
 );
 
 CREATE TABLE restaurants (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id VARCHAR(32) PRIMARY KEY,         -- Use VARCHAR for string IDs
     name VARCHAR(100),
+    description TEXT,
+    tel VARCHAR(20),
     address VARCHAR(255),
-    lat DOUBLE,
-    lng DOUBLE,
-    cuisine VARCHAR(50)
+    zipcode VARCHAR(10),
+    opentime VARCHAR(100),
+    map VARCHAR(255),                   -- If you want to store a map URL or info
+    lng DOUBLE,                         -- Px
+    lat DOUBLE,                         -- Py
+    class VARCHAR(20),                  -- For cuisine/type
+    website VARCHAR(255),
+    parkinginfo VARCHAR(255),
+    changetime DATETIME                 -- For last update time
 );
 
 CREATE TABLE favorites (
