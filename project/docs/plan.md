@@ -1,111 +1,111 @@
-# Restaurant Search & Navigation App — Implementation Plan
+# 餐廳搜尋與導航應用 — 實作計畫
 
-## Project Overview
+## 專案概述
 
-A mobile application for searching restaurants, marking favorites, and planning navigation routes. The system consists of three main components:
+本專案是一個行動應用程式，提供餐廳搜尋、收藏、以及路線規劃功能。系統包含三大元件：
 
-1. **Android User App** — User interface for search, favorites, navigation, and route planning.
-2. **Backend Server (Python + Flask)** — REST API for data management, authentication, and business logic.
-3. **Database (MariaDB)** — Stores restaurant, user, favorites, and route plan data.
+1. **Android 用戶端 App** — 提供搜尋、收藏、導航、路線規劃等使用者介面。
+2. **後端伺服器 (Python + Flask)** — 提供資料管理、認證、商業邏輯的 REST API。
+3. **資料庫 (MariaDB)** — 儲存餐廳、用戶、收藏、路線規劃等資料。
 
 ---
 
-## Architecture
+## 架構圖
 
 ```
-[Android App] <——> [Flask Backend API] <——> [MariaDB Database]
+[Android App] <——> [Flask 後端 API] <——> [MariaDB 資料庫]
 ```
 
-- Android app communicates with backend via HTTP REST API.
-- Backend interacts with MariaDB for persistent storage.
+- Android App 透過 HTTP REST API 與後端溝通。
+- 後端透過 MariaDB 進行資料持久化。
 
 ---
 
-## Technology Stack
+## 技術棧
 
-- **Android App**: Kotlin (preferred), Android Studio, Retrofit, Google Maps SDK
-- **Backend**: Python, Flask, Flask-RESTful/RESTX, SQLAlchemy, JWT authentication
-- **Database**: MariaDB
-
----
-
-## Feature Breakdown
-
-- **Restaurant Search**: Search/filter by name, location, cuisine
-- **Favorites**: Mark/unmark restaurants, view favorites
-- **Navigation**: Show route from user location to restaurant (Google Maps integration)
-- **Route Planning**: Create/edit a list of restaurants to visit in order, view navigation for the list
-- **User Authentication**: Register, login, manage user data
+- **Android App**：Kotlin（建議）、Android Studio、Retrofit、Google Maps SDK
+- **後端**：Python、Flask、Flask-RESTful/RESTX、SQLAlchemy、JWT 認證
+- **資料庫**：MariaDB
 
 ---
 
-## Step-by-Step Implementation Plan
+## 功能拆解
 
-### Phase 1: Setup & Basic Functionality
+- **餐廳搜尋**：依名稱、地點、類型搜尋/篩選
+- **收藏**：標記/取消收藏餐廳，瀏覽收藏清單
+- **導航**：顯示從用戶位置到餐廳的路線（整合 Google Maps）
+- **路線規劃**：建立/編輯欲拜訪餐廳清單，依序導航
+- **用戶認證**：註冊、登入、管理用戶資料
 
-1. **Database Design**
-   - Design schema, create tables in MariaDB
-   - Populate with sample restaurant data
+---
 
-2. **Backend API**
-   - Set up Flask project structure
-   - Implement endpoints:
-     - `/restaurants` (GET, search/filter)
-     - `/favorites` (GET, POST, DELETE)
-     - `/route-plans` (GET, POST, DELETE)
-     - `/auth` (register/login)
-   - Connect to MariaDB using SQLAlchemy
+## 分階段實作計畫
+
+### 第一階段：環境建置與基本功能
+
+1. **資料庫設計**
+   - 設計資料表結構，於 MariaDB 建立資料表
+   - 匯入範例餐廳資料
+
+2. **後端 API**
+   - 建立 Flask 專案結構
+   - 實作 API 端點：
+     - `/restaurants`（GET，搜尋/篩選）
+     - `/favorites`（GET、POST、DELETE）
+     - `/route-plans`（GET、POST、DELETE）
+     - `/auth`（註冊/登入）
+   - 透過 SQLAlchemy 連接 MariaDB
 
 3. **Android App**
-   - Set up project in Android Studio
-   - Implement login/register screens
-   - Implement restaurant search UI
-   - Integrate with backend API using Retrofit
-   - Display restaurant list
+   - 於 Android Studio 建立專案
+   - 實作登入/註冊畫面
+   - 實作餐廳搜尋 UI
+   - 透過 Retrofit 串接後端 API
+   - 顯示餐廳清單
 
-### Phase 2: Advanced Features
+### 第二階段：進階功能
 
-4. **Favorites**
-   - Add favorite/unfavorite functionality in app and backend
-   - Show favorite restaurants in a separate list
+4. **收藏功能**
+   - App 與後端皆實作收藏/取消收藏功能
+   - 顯示收藏餐廳清單
 
-5. **Navigation**
-   - Integrate Google Maps SDK
-   - Show route from user location to selected restaurant
+5. **導航功能**
+   - 整合 Google Maps SDK
+   - 顯示從用戶位置到餐廳的路線
 
-6. **Route Planning**
-   - Allow users to create/edit a list of restaurants to visit
-   - Backend stores route plans
-   - App displays route plan and navigation for each step
+6. **路線規劃**
+   - 允許用戶建立/編輯拜訪餐廳清單
+   - 後端儲存路線規劃
+   - App 顯示路線規劃與每一站導航
 
-### Phase 3: Polish & Testing
+### 第三階段：優化與測試
 
-7. **Authentication & Security**
-   - Secure API endpoints (JWT tokens)
-   - Hash passwords in database
+7. **認證與安全**
+   - API 端點加上 JWT 驗證
+   - 資料庫密碼加密儲存
 
-8. **Testing**
-   - Unit and integration tests for backend
-   - UI and functional tests for Android app
+8. **測試**
+   - 後端單元測試與整合測試
+   - Android App UI 與功能測試
 
-9. **Deployment**
-   - Deploy backend (Heroku, AWS, etc.)
-   - Prepare app for release (Play Store)
-
----
-
-## Suggestions & Best Practices
-
-- Use RESTful API design and versioning
-- Validate and sanitize all inputs
-- Secure user data and API endpoints
-- Document API endpoints (Swagger)
-- Automate tests for backend and app
-- Make UI intuitive and responsive
+9. **部署**
+   - 後端部署（Heroku、AWS 等）
+   - App 上架（Play Store）
 
 ---
 
-## Example Database Schema
+## 建議與最佳實踐
+
+- 採用 RESTful API 設計與版本控管
+- 所有輸入皆需驗證與消毒
+- 用戶資料與 API 端點需加強安全
+- API 端點文件化（Swagger）
+- 後端與 App 自動化測試
+- UI 需直覺且回應迅速
+
+---
+
+## 資料庫範例結構
 
 ```sql
 CREATE TABLE users (
@@ -116,20 +116,20 @@ CREATE TABLE users (
 );
 
 CREATE TABLE restaurants (
-    id VARCHAR(32) PRIMARY KEY,         -- Use VARCHAR for string IDs
+    id VARCHAR(32) PRIMARY KEY,         -- 字串型主鍵
     name VARCHAR(100),
     description TEXT,
     tel VARCHAR(20),
     address VARCHAR(255),
     zipcode VARCHAR(10),
     opentime VARCHAR(100),
-    map VARCHAR(255),                   -- If you want to store a map URL or info
+    map VARCHAR(255),                   -- 若需存地圖網址
     lng DOUBLE,                         -- Px
     lat DOUBLE,                         -- Py
-    class VARCHAR(20),                  -- For cuisine/type
+    class VARCHAR(20),                  -- 類型/分類
     website VARCHAR(255),
     parkinginfo VARCHAR(255),
-    changetime DATETIME                 -- For last update time
+    changetime DATETIME                 -- 最後更新時間
 );
 
 CREATE TABLE favorites (
@@ -160,13 +160,13 @@ CREATE TABLE route_plan_items (
 
 ---
 
-## Next Steps
+## 下一步
 
-1. Design database schema and set up MariaDB
-2. Set up Flask backend and connect to database
-3. Start Android app project and connect to backend
-4. Implement features iteratively, testing as you go
+1. 設計資料庫結構並建置 MariaDB
+2. 建立 Flask 後端並連接資料庫
+3. 開始 Android App 專案並串接後端
+4. 依功能逐步實作與測試
 
 ---
 
-*This plan serves as a roadmap for your team. Update as needed during development.*
+*本計畫書為團隊開發路線圖，開發過程可隨時更新。*

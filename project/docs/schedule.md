@@ -1,63 +1,63 @@
-# 📅 Work Plan & Schedule (11/27 ~ 12/7)
+# 📅 工作計畫與時程表（11/27 ~ 12/7）
 
 ```
-Legend:
-[==] Task in progress
-[  ] Idle/Waiting
+圖例:
+[==] 進行中
+[  ] 閒置/等待
 
-Dates:  11/27  11/28  11/29  11/30  12/01  12/02  12/03  12/04  12/05  12/06  12/07
+日期:  11/27  11/28  11/29  11/30  12/01  12/02  12/03  12/04  12/05  12/06  12/07
 
-1. Database Setup & Sample Data
+1. 資料庫建置與範例資料
       [==][==][==][  ][  ][  ][  ][  ][  ][  ][  ]
 
-2. Backend API (Flask) Core Endpoints
+2. 後端 API (Flask) 核心端點
       [  ][==][==][==][==][==][  ][  ][  ][  ][  ]
 
-3. Android App Project Setup & Login/Register
+3. Android App 專案建置與登入/註冊
       [  ][  ][==][==][==][  ][  ][  ][  ][  ][  ]
 
-4. Restaurant Search & Display (App + API)
+4. 餐廳搜尋與顯示（App + API）
       [  ][  ][  ][==][==][==][==][  ][  ][  ][  ]
 
-5. Favorites Feature (App + API)
+5. 收藏功能（App + API）
       [  ][  ][  ][  ][==][==][==][==][  ][  ][  ]
 
-6. Navigation Integration (Google Maps)
+6. 導航整合（Google Maps）
       [  ][  ][  ][  ][  ][==][==][==][==][  ][  ]
 
-7. Route Planning Feature
+7. 路線規劃功能
       [  ][  ][  ][  ][  ][  ][==][==][==][==][  ]
 
-8. Testing & Bug Fixes
+8. 測試與除錯
       [  ][  ][  ][  ][  ][  ][  ][==][==][==][==]
 
-9. Deployment & Documentation
+9. 部署與文件撰寫
       [  ][  ][  ][  ][  ][  ][  ][  ][==][==][==]
 ```
 
 ---
 
-## 📝 Task Details
+## 📝 任務細節
 
-1. **Database Setup & Sample Data**: Design schema, create tables, insert sample restaurants.
-2. **Backend API Core Endpoints**: Implement `/restaurants`, `/auth`, `/favorites`, `/route-plans`.
-3. **Android App Setup & Auth**: Initialize project, build login/register screens, connect to API.
-4. **Restaurant Search & Display**: Build search UI, connect to API, display results.
-5. **Favorites Feature**: Add favorite/unfavorite functionality in app and backend.
-6. **Navigation Integration**: Integrate Google Maps SDK, show routes.
-7. **Route Planning Feature**: Allow users to create/edit a list of restaurants to visit.
-8. **Testing & Bug Fixes**: Test all features, fix bugs, polish UI/UX.
-9. **Deployment & Documentation**: Deploy backend, prepare app for release, write documentation.
-
----
-
-## ⏳ Suggestions
-
-- Assign tasks to team members based on expertise.
-- Use daily standups to track progress and adjust as needed.
-- Prioritize core features first; polish and extras can be added if time allows.
-- Keep documentation updated as you go.
+1. **資料庫建置與範例資料**：設計資料表、建立資料庫、匯入範例餐廳。
+2. **後端 API 核心端點**：實作 `/restaurants`、`/auth`、`/favorites`、`/route-plans`。
+3. **Android App 建置與認證**：初始化專案、製作登入/註冊畫面、串接 API。
+4. **餐廳搜尋與顯示**：建置搜尋 UI、串接 API、顯示結果。
+5. **收藏功能**：App 與後端皆實作收藏/取消功能。
+6. **導航整合**：整合 Google Maps SDK，顯示路線。
+7. **路線規劃功能**：允許用戶建立/編輯拜訪餐廳清單。
+8. **測試與除錯**：測試所有功能、修正錯誤、優化 UI/UX。
+9. **部署與文件撰寫**：部署後端、準備 App 上架、撰寫文件。
 
 ---
 
-*Update this schedule as needed during development.*
+## ⏳ 建議
+
+- 根據專長分配任務給團隊成員。
+- 每日站立會追蹤進度並隨時調整。
+- 先完成核心功能，優化與額外功能可後補。
+- 文件隨時更新，確保團隊同步。
+
+---
+
+*開發過程可隨時更新本時程表。*

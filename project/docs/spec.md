@@ -1,278 +1,278 @@
-# 🗓️ Daily Task Spec Sheets for Project (11/27–12/7)
+# 🗓️ 專案每日任務規格表（11/27–12/7）
 
 ---
 
-## Day 1: 11/27
+## 第一天：11/27
 
-### Database Setup & Sample Data
-- **Objective:** Design and initialize the MariaDB schema.
-- **Steps:**
-  1. Install MariaDB locally or on a server.
-  2. Create a new database for the project.
-  3. Draft SQL scripts for tables: users, restaurants, favorites, route_plans, route_plan_items.
-  4. Insert at least 10 sample restaurants.
-- **Tips:** Use plan.md schema; tools like DBeaver/phpMyAdmin help.
-- **Deliverables:** SQL scripts, sample data, connection info.
-
----
-
-## Day 2: 11/28
-
-### Database Setup & Sample Data
-- **Objective:** Finalize schema and sample data.
-- **Steps:**
-  1. Test table creation and sample inserts.
-  2. Add more sample data if needed.
-  3. Document schema for backend team.
-- **Deliverables:** Final schema, sample data, documentation.
-
-### Backend API (Flask) Core Endpoints
-- **Objective:** Set up Flask project and DB connection.
-- **Steps:**
-  1. Create Flask project (use virtualenv).
-  2. Install Flask, Flask-RESTful/RESTX, SQLAlchemy, MariaDB connector.
-  3. Set up basic structure (app.py, models, routes).
-  4. Connect to MariaDB using SQLAlchemy.
-- **Tips:** Use Flask and SQLAlchemy docs.
-- **Deliverables:** Flask project, DB connection, initial commit.
+### 資料庫建置與範例資料
+- **目標：** 設計並初始化 MariaDB 資料表結構。
+- **步驟：**
+  1. 在本機或伺服器安裝 MariaDB。
+  2. 建立專案專用資料庫。
+  3. 撰寫 SQL 腳本建立 users、restaurants、favorites、route_plans、route_plan_items 資料表。
+  4. 匯入至少 10 筆範例餐廳資料。
+- **提示：** 參考 plan.md 的 schema，可用 DBeaver/phpMyAdmin 等工具輔助。
+- **交付物：** SQL 腳本、範例資料、連線資訊。
 
 ---
 
-## Day 3: 11/29
+## 第二天：11/28
 
-### Database Setup & Sample Data
-- **Objective:** Ensure DB is ready for backend.
-- **Steps:**
-  1. Final review of schema and data.
-  2. Share connection info with backend team.
-- **Deliverables:** Ready-to-use DB.
+### 資料庫建置與範例資料
+- **目標：** 完成 schema 與範例資料。
+- **步驟：**
+  1. 測試資料表建立與範例資料匯入。
+  2. 如有需要，補充更多範例資料。
+  3. 撰寫 schema 文件給後端團隊。
+- **交付物：** 最終 schema、範例資料、文件。
 
-### Backend API (Flask) Core Endpoints
-- **Objective:** Implement `/restaurants` and `/auth` endpoints.
-- **Steps:**
-  1. Define models for users and restaurants.
-  2. Implement GET `/restaurants` (list/search).
-  3. Implement POST `/auth/register` and `/auth/login`.
-  4. Test endpoints with sample data.
-- **Tips:** Use Flask-RESTful for endpoints.
-- **Deliverables:** Working endpoints, tested with sample data.
-
-### Android App Project Setup & Login/Register
-- **Objective:** Initialize Android project and build auth screens.
-- **Steps:**
-  1. Create new Android Studio project.
-  2. Set up basic navigation and UI theme.
-  3. Build login and register screens.
-  4. Prepare Retrofit for API calls.
-- **Tips:** Use Kotlin and Android docs.
-- **Deliverables:** Android project, login/register UI.
+### 後端 API (Flask) 核心端點
+- **目標：** 建立 Flask 專案並連接資料庫。
+- **步驟：**
+  1. 建立 Flask 專案（建議用 virtualenv）。
+  2. 安裝 Flask、Flask-RESTful/RESTX、SQLAlchemy、MariaDB 連接器。
+  3. 建立基本結構（app.py、models、routes）。
+  4. 透過 SQLAlchemy 連接 MariaDB。
+- **提示：** 參考 Flask 與 SQLAlchemy 官方文件。
+- **交付物：** Flask 專案、資料庫連線、首次提交。
 
 ---
 
-## Day 4: 11/30
+## 第三天：11/29
 
-### Backend API (Flask) Core Endpoints
-- **Objective:** Implement `/favorites` and `/route-plans` endpoints.
-- **Steps:**
-  1. Define models for favorites and route plans.
-  2. Implement GET/POST/DELETE for `/favorites`.
-  3. Implement GET/POST/DELETE for `/route-plans`.
-  4. Test endpoints.
-- **Deliverables:** Working endpoints, tested.
+### 資料庫建置與範例資料
+- **目標：** 確認資料庫可供後端使用。
+- **步驟：**
+  1. 最終檢查 schema 與資料。
+  2. 提供連線資訊給後端團隊。
+- **交付物：** 可用的資料庫。
 
-### Android App Project Setup & Login/Register
-- **Objective:** Connect login/register screens to backend.
-- **Steps:**
-  1. Implement API calls for login/register using Retrofit.
-  2. Handle authentication tokens.
-  3. Test login/register flow.
-- **Deliverables:** Auth flow working in app.
+### 後端 API (Flask) 核心端點
+- **目標：** 實作 `/restaurants` 與 `/auth` 端點。
+- **步驟：**
+  1. 定義 users 與 restaurants 的 models。
+  2. 實作 GET `/restaurants`（列表/搜尋）。
+  3. 實作 POST `/auth/register` 與 `/auth/login`。
+  4. 用範例資料測試端點。
+- **提示：** 建議用 Flask-RESTful 建立端點。
+- **交付物：** 可用端點，並通過測試。
 
-### Restaurant Search & Display (App + API)
-- **Objective:** Build restaurant search UI and backend support.
-- **Steps:**
-  1. Design search UI in Android app.
-  2. Implement API call to `/restaurants`.
-  3. Display restaurant list in app.
-- **Deliverables:** Search UI, API integration.
-
----
-
-## Day 5: 12/01
-
-### Backend API (Flask) Core Endpoints
-- **Objective:** Polish and test all endpoints.
-- **Steps:**
-  1. Add error handling and validation.
-  2. Write unit tests for endpoints.
-  3. Document API.
-- **Deliverables:** Robust, documented API.
-
-### Restaurant Search & Display (App + API)
-- **Objective:** Finalize search and display features.
-- **Steps:**
-  1. Add filters (cuisine, location).
-  2. Polish UI/UX.
-  3. Test with real data.
-- **Deliverables:** Search feature complete.
-
-### Favorites Feature (App + API)
-- **Objective:** Implement favorites in app and backend.
-- **Steps:**
-  1. Add favorite/unfavorite buttons in app.
-  2. Connect to `/favorites` API.
-  3. Display favorite restaurants.
-- **Deliverables:** Favorites feature working.
+### Android App 專案建置與登入/註冊
+- **目標：** 初始化 Android 專案並製作認證畫面。
+- **步驟：**
+  1. 建立新的 Android Studio 專案。
+  2. 設定基本導覽與 UI 主題。
+  3. 製作登入與註冊畫面。
+  4. 準備 Retrofit 進行 API 呼叫。
+- **提示：** 參考 Kotlin 與 Android 官方文件。
+- **交付物：** Android 專案、登入/註冊 UI。
 
 ---
 
-## Day 6: 12/02
+## 第四天：11/30
 
-### Backend API (Flask) Core Endpoints
-- **Objective:** Final review and bug fixes.
-- **Steps:**
-  1. Fix any issues found in testing.
-  2. Update documentation.
-- **Deliverables:** Finalized backend.
+### 後端 API (Flask) 核心端點
+- **目標：** 實作 `/favorites` 與 `/route-plans` 端點。
+- **步驟：**
+  1. 定義 favorites 與 route plans 的 models。
+  2. 實作 `/favorites` 的 GET/POST/DELETE。
+  3. 實作 `/route-plans` 的 GET/POST/DELETE。
+  4. 測試端點。
+- **交付物：** 可用端點，並通過測試。
 
-### Restaurant Search & Display (App + API)
-- **Objective:** Final polish and bug fixes.
-- **Steps:**
-  1. Address UI/UX feedback.
-  2. Ensure smooth API integration.
-- **Deliverables:** Polished search feature.
+### Android App 專案建置與登入/註冊
+- **目標：** 串接登入/註冊畫面與後端。
+- **步驟：**
+  1. 用 Retrofit 實作登入/註冊 API 呼叫。
+  2. 處理認證 token。
+  3. 測試登入/註冊流程。
+- **交付物：** App 認證流程可用。
 
-### Favorites Feature (App + API)
-- **Objective:** Polish and test favorites.
-- **Steps:**
-  1. Test edge cases (add/remove).
-  2. Improve UI/UX.
-- **Deliverables:** Polished favorites feature.
-
-### Navigation Integration (Google Maps)
-- **Objective:** Integrate Google Maps SDK.
-- **Steps:**
-  1. Set up Google Maps in Android app.
-  2. Display map and user location.
-  3. Prepare for route display.
-- **Tips:** Use Google Maps SDK docs.
-- **Deliverables:** Map integration working.
+### 餐廳搜尋與顯示（App + API）
+- **目標：** 製作餐廳搜尋 UI 與後端支援。
+- **步驟：**
+  1. 設計 Android App 的搜尋 UI。
+  2. 實作 `/restaurants` API 呼叫。
+  3. 在 App 顯示餐廳清單。
+- **交付物：** 搜尋 UI 與 API 串接。
 
 ---
 
-## Day 7: 12/03
+## 第五天：12/01
 
-### Restaurant Search & Display (App + API)
-- **Objective:** Final testing and bug fixes.
-- **Steps:**
-  1. Test with different search queries.
-  2. Fix any remaining issues.
-- **Deliverables:** Search feature ready.
+### 後端 API (Flask) 核心端點
+- **目標：** 完善並測試所有端點。
+- **步驟：**
+  1. 增加錯誤處理與資料驗證。
+  2. 撰寫端點單元測試。
+  3. 撰寫 API 文件。
+- **交付物：** 穩定且有文件的 API。
 
-### Favorites Feature (App + API)
-- **Objective:** Final testing and bug fixes.
-- **Steps:**
-  1. Test with multiple users.
-  2. Fix any remaining issues.
-- **Deliverables:** Favorites feature ready.
+### 餐廳搜尋與顯示（App + API）
+- **目標：** 完成搜尋與顯示功能。
+- **步驟：**
+  1. 增加篩選（類型、地點）。
+  2. 優化 UI/UX。
+  3. 用真實資料測試。
+- **交付物：** 搜尋功能完成。
 
-### Navigation Integration (Google Maps)
-- **Objective:** Show route to selected restaurant.
-- **Steps:**
-  1. Implement route display from user to restaurant.
-  2. Test navigation feature.
-- **Deliverables:** Navigation working.
-
----
-
-## Day 8: 12/04
-
-### Favorites Feature (App + API)
-- **Objective:** Final polish and documentation.
-- **Steps:**
-  1. Document feature for users.
-  2. Final UI tweaks.
-- **Deliverables:** Favorites feature complete.
-
-### Navigation Integration (Google Maps)
-- **Objective:** Polish and test navigation.
-- **Steps:**
-  1. Test with different restaurants.
-  2. Fix any issues.
-- **Deliverables:** Navigation feature complete.
-
-### Route Planning Feature
-- **Objective:** Start route planning feature.
-- **Steps:**
-  1. Design UI for route planning.
-  2. Implement backend support for route plans.
-- **Deliverables:** Initial route planning feature.
+### 收藏功能（App + API）
+- **目標：** App 與後端實作收藏功能。
+- **步驟：**
+  1. App 加入收藏/取消按鈕。
+  2. 串接 `/favorites` API。
+  3. 顯示收藏餐廳。
+- **交付物：** 收藏功能可用。
 
 ---
 
-## Day 9: 12/05
+## 第六天：12/02
 
-### Navigation Integration (Google Maps)
-- **Objective:** Final polish and bug fixes.
-- **Steps:**
-  1. Test with edge cases.
-  2. Finalize documentation.
-- **Deliverables:** Navigation feature finalized.
+### 後端 API (Flask) 核心端點
+- **目標：** 最終檢查與修正錯誤。
+- **步驟：**
+  1. 修正測試中發現的問題。
+  2. 更新文件。
+- **交付物：** 完整後端。
 
-### Route Planning Feature
-- **Objective:** Implement route planning in app and backend.
-- **Steps:**
-  1. Allow users to add restaurants to a plan.
-  2. Save and retrieve plans via API.
-  3. Display planned route in app.
-- **Deliverables:** Route planning feature working.
+### 餐廳搜尋與顯示（App + API）
+- **目標：** 最終優化與修正錯誤。
+- **步驟：**
+  1. 處理 UI/UX 回饋。
+  2. 確保 API 串接順暢。
+- **交付物：** 完善搜尋功能。
 
----
+### 收藏功能（App + API）
+- **目標：** 優化與測試收藏功能。
+- **步驟：**
+  1. 測試各種情境（新增/移除）。
+  2. 改善 UI/UX。
+- **交付物：** 完善收藏功能。
 
-## Day 10: 12/06
-
-### Route Planning Feature
-- **Objective:** Finalize route planning feature.
-- **Steps:**
-  1. Polish UI/UX.
-  2. Test with multiple plans.
-  3. Fix any issues.
-- **Deliverables:** Route planning feature complete.
-
-### Testing & Bug Fixes
-- **Objective:** Test all features and fix bugs.
-- **Steps:**
-  1. Run unit and integration tests.
-  2. Fix bugs found.
-  3. Prepare for deployment.
-- **Deliverables:** All features tested and bug-free.
-
-### Deployment & Documentation
-- **Objective:** Prepare for deployment and document project.
-- **Steps:**
-  1. Write user and developer documentation.
-  2. Prepare backend for deployment.
-- **Deliverables:** Documentation, deployment-ready backend.
+### 導航整合（Google Maps）
+- **目標：** 整合 Google Maps SDK。
+- **步驟：**
+  1. 在 Android App 設定 Google Maps。
+  2. 顯示地圖與用戶位置。
+  3. 準備路線顯示。
+- **提示：** 參考 Google Maps SDK 文件。
+- **交付物：** 地圖整合完成。
 
 ---
 
-## Day 11: 12/07
+## 第七天：12/03
 
-### Testing & Bug Fixes
-- **Objective:** Final testing and bug fixes.
-- **Steps:**
-  1. Final round of testing.
-  2. Fix last-minute bugs.
-- **Deliverables:** Stable, tested app and backend.
+### 餐廳搜尋與顯示（App + API）
+- **目標：** 最終測試與修正錯誤。
+- **步驟：**
+  1. 測試不同搜尋條件。
+  2. 修正所有剩餘問題。
+- **交付物：** 搜尋功能穩定。
 
-### Deployment & Documentation
-- **Objective:** Deploy backend and release app.
-- **Steps:**
-  1. Deploy backend to server/cloud.
-  2. Prepare app for Play Store release.
-  3. Finalize all documentation.
-- **Deliverables:** Deployed backend, app ready for release, complete documentation.
+### 收藏功能（App + API）
+- **目標：** 最終測試與修正錯誤。
+- **步驟：**
+  1. 多用戶測試。
+  2. 修正所有剩餘問題。
+- **交付物：** 收藏功能穩定。
+
+### 導航整合（Google Maps）
+- **目標：** 顯示至餐廳的路線。
+- **步驟：**
+  1. 實作用戶到餐廳的路線顯示。
+  2. 測試導航功能。
+- **交付物：** 導航功能可用。
 
 ---
 
-*Update this spec sheet as needed during development to reflect progress and changes.*
+## 第八天：12/04
+
+### 收藏功能（App + API）
+- **目標：** 最終優化與文件撰寫。
+- **步驟：**
+  1. 撰寫用戶說明文件。
+  2. 最後 UI 微調。
+- **交付物：** 收藏功能完成。
+
+### 導航整合（Google Maps）
+- **目標：** 優化與測試導航功能。
+- **步驟：**
+  1. 測試不同餐廳。
+  2. 修正所有問題。
+- **交付物：** 導航功能完成。
+
+### 路線規劃功能
+- **目標：** 開始路線規劃功能。
+- **步驟：**
+  1. 設計路線規劃 UI。
+  2. 實作後端支援。
+- **交付物：** 初步路線規劃功能。
+
+---
+
+## 第九天：12/05
+
+### 導航整合（Google Maps）
+- **目標：** 最終優化與修正錯誤。
+- **步驟：**
+  1. 測試各種情境。
+  2. 完成文件。
+- **交付物：** 導航功能最終版。
+
+### 路線規劃功能
+- **目標：** App 與後端實作路線規劃。
+- **步驟：**
+  1. 允許用戶新增餐廳至規劃。
+  2. 透過 API 儲存與讀取規劃。
+  3. App 顯示規劃路線。
+- **交付物：** 路線規劃功能可用。
+
+---
+
+## 第十天：12/06
+
+### 路線規劃功能
+- **目標：** 完成路線規劃功能。
+- **步驟：**
+  1. 優化 UI/UX。
+  2. 多規劃測試。
+  3. 修正所有問題。
+- **交付物：** 路線規劃功能完成。
+
+### 測試與除錯
+- **目標：** 測試所有功能並修正錯誤。
+- **步驟：**
+  1. 執行單元與整合測試。
+  2. 修正所有錯誤。
+  3. 準備部署。
+- **交付物：** 所有功能測試通過且無重大錯誤。
+
+### 部署與文件撰寫
+- **目標：** 準備部署並撰寫文件。
+- **步驟：**
+  1. 撰寫用戶與開發者文件。
+  2. 準備後端部署。
+- **交付物：** 文件、可部署後端。
+
+---
+
+## 第十一天：12/07
+
+### 測試與除錯
+- **目標：** 最終測試與修正錯誤。
+- **步驟：**
+  1. 最後一輪測試。
+  2. 修正最後問題。
+- **交付物：** 穩定、測試通過的 App 與後端。
+
+### 部署與文件撰寫
+- **目標：** 部署後端並釋出 App。
+- **步驟：**
+  1. 將後端部署至伺服器/雲端。
+  2. 準備 App 上架 Play Store。
+  3. 完成所有文件。
+- **交付物：** 已部署後端、可上架 App、完整文件。
+
+---
+
+*開發過程中可隨時更新本規格表以反映進度與變更。*
