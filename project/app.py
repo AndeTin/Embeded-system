@@ -4,6 +4,8 @@ from flask_restful import Api
 from flask_jwt_extended import JWTManager
 from config import Config
 
+from resources.restaurant import restaurant
+
 # Initialize extensions
 db = SQLAlchemy()
 api = Api()
@@ -27,3 +29,4 @@ def create_app():
 if __name__ == '__main__':
     app = create_app()
     app.run(debug=True)
+    restaurant()
