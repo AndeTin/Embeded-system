@@ -75,8 +75,8 @@ private fun RestaurantItem(restaurant: Restaurant, onAddToPlanClick: () -> Unit,
     Card(modifier = Modifier
         .fillMaxWidth()
         .padding(vertical = 4.dp)) {
-        Row(modifier = Modifier.padding(8.dp), horizontalArrangement = Arrangement.SpaceBetween) {
-            Column {
+        Row(modifier = Modifier.padding(8.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+            Column(modifier = Modifier.weight(1f)) {
                 Text(text = restaurant.name)
                 Text(text = restaurant.address)
                 Text(text = restaurant.cuisine)
