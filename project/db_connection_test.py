@@ -1,6 +1,8 @@
 import os
 from sqlalchemy import create_engine
 from dotenv import load_dotenv
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 
 # Load environment variables from .env
 load_dotenv()

@@ -22,6 +22,10 @@ def create_app():
     api.add_resource(RestaurantResource, '/restaurants/<string:restaurant_id>')
     # Add other resources similarly...
 
+    from resources.user import UserRegisterResource, UserLoginResource
+    api.add_resource(UserRegisterResource, '/register')
+    api.add_resource(UserLoginResource, '/login')
+
     return app
 
 if __name__ == '__main__':
