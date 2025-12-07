@@ -27,3 +27,4 @@ replay_pid*
 .kotlin/
 
 project/.env
+project/resources/__pycache__/restaurant.cpython-312.pyc
