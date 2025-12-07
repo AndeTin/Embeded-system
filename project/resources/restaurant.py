@@ -1,7 +1,6 @@
 from flask_restful import Resource
 # from models import Restaurant
 
-
 class RestaurantListResource(Resource):
     def get(self):
         restaurants = Restaurant.query.all()
