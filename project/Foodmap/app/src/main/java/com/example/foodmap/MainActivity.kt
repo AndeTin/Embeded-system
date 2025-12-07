@@ -9,9 +9,11 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.foodmap.ui.theme.FoodmapTheme
 
 class MainActivity : ComponentActivity() {
@@ -36,10 +38,14 @@ fun FoodmapApp() {
     val navController = rememberNavController()
     NavHost(navController = navController, startDestination = "login") {
         composable("login") {
-            LoginScreen(onLoginSuccess = { navController.navigate("main") })
+            LoginScreen(onLoginSuccess = { username -> navController.navigate("main/$username") })
         }
-        composable("main") {
-            MainScreen()
+        composable(
+            route = "main/{username}",
+            arguments = listOf(navArgument("username") { type = NavType.StringType })
+        ) { backStackEntry ->
+            val username = backStackEntry.arguments?.getString("username") ?: ""
+            MainScreen(username = username)
         }
     }
 }

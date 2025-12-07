@@ -1,6 +1,9 @@
 package com.example.foodmap
 
 import android.app.Activity
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ExitToApp
@@ -11,17 +14,20 @@ import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun MainScreen() {
+fun MainScreen(username: String) {
     val navController = rememberNavController()
     val context = LocalContext.current
 
@@ -188,17 +194,20 @@ fun MainScreen() {
     Scaffold(
         bottomBar = {
             BottomAppBar {
-                IconButton(onClick = { navController.navigate("search") }) {
-                    Icon(Icons.Filled.Search, contentDescription = "Search")
-                }
-                IconButton(onClick = { navController.navigate("favorites") }) {
-                    Icon(Icons.Filled.Favorite, contentDescription = "Favorites")
-                }
-                IconButton(onClick = { navController.navigate("route") }) {
-                    Icon(Icons.AutoMirrored.Filled.List, contentDescription = "Route Plan")
-                }
-                IconButton(onClick = { (context as? Activity)?.finish() }) {
-                    Icon(Icons.AutoMirrored.Filled.ExitToApp, contentDescription = "Exit")
+                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                    IconButton(onClick = { navController.navigate("search") }) {
+                        Icon(Icons.Filled.Search, contentDescription = "Search")
+                    }
+                    IconButton(onClick = { navController.navigate("favorites") }) {
+                        Icon(Icons.Filled.Favorite, contentDescription = "Favorites")
+                    }
+                    IconButton(onClick = { navController.navigate("route") }) {
+                        Icon(Icons.AutoMirrored.Filled.List, contentDescription = "Route Plan")
+                    }
+                    Text(text = username, modifier = Modifier.padding(end = 8.dp))
+                    IconButton(onClick = { (context as? Activity)?.finish() }) {
+                        Icon(Icons.AutoMirrored.Filled.ExitToApp, contentDescription = "Exit")
+                    }
                 }
             }
         }
